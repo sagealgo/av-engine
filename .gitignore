@@ -1,0 +1,7 @@
+jobs/*
+!jobs/.gitkeep
+_frames*
+_engine_*
+output_*.mp4
+*.pyc
+__pycache__

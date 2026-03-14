@@ -1,0 +1,70 @@
+{
+  "_comment": "Fully generative — no input files needed. Abstract good-vibes art from math.",
+  "meta": {
+    "name": "Generative Good Vibes",
+    "seed": 20260315,
+    "duration": 15,
+    "fps": 30,
+    "width": 720,
+    "height": 1280,
+    "output": "output_generative.mp4"
+  },
+  "sources": {
+    "video": null,
+    "images": [],
+    "generators": [
+      "dark_bg",
+      "constellation_field",
+      "geometry_field",
+      "iconic_shapes",
+      "sun_moon",
+      "jellyfish",
+      {"type": "wireframe_cube", "rot": 0.4, "line_color": "primary"},
+      {"type": "wireframe_cube", "rot": 1.8, "line_color": "accent"},
+      {"type": "gradient", "c1": "bg", "c2": "primary", "angle": 135},
+      {"type": "gradient", "c1": "bg", "c2": "secondary", "angle": 45}
+    ],
+    "text_screens": [
+      {"lines": [["GOOD VIBES", "accent", 72], ["ONLY", "highlight", 60]]},
+      {"lines": [["✨", "accent", 100], ["POSITIVITY", "primary", 56]]}
+    ],
+    "build_mutations": true,
+    "build_diffusions": true,
+    "build_extreme": true
+  },
+  "colors": {
+    "bg": [8, 8, 18],
+    "primary": [100, 200, 255],
+    "secondary": [255, 100, 150],
+    "accent": [255, 220, 80],
+    "highlight": [230, 230, 245],
+    "muted": [140, 140, 160],
+    "warm": [255, 180, 100]
+  },
+  "text": {
+    "vibes": ["GOOD VIBES", "✨", "POSITIVITY", "LOVE", "COSMIC", "SACRED", "∞"],
+    "font_size_base": 60
+  },
+  "timeline": [
+    {"style": "chaos",     "pct": 13, "intensity": [0.9, 1.0],  "texts": ["✨", "", "GOOD VIBES"]},
+    {"style": "calm",      "pct": 20, "intensity": [0.05, 0.15], "texts": ["", "COSMIC"]},
+    {"style": "growth",    "pct": 20, "intensity": [0.1, 0.5],  "texts": ["SACRED", "", "✨"]},
+    {"style": "descent",   "pct": 20, "intensity": [0.3, 0.85], "texts": ["LOVE", "", "∞"]},
+    {"style": "abyss",     "pct": 14, "intensity": [0.85, 1.0], "texts": ["POSITIVITY"]},
+    {"style": "catharsis", "pct": 6,  "intensity": [0.05, 0.08], "texts": ["✨"]},
+    {"style": "resolve",   "pct": 7,  "intensity": [0.05, 0.1],  "texts": ["GOOD VIBES"]}
+  ],
+  "motifs": {
+    "enabled": true,
+    "items": [
+      {"type": "orbiting_square", "color": "primary", "size": 50, "orbit_radius": 200, "speed": 1.2},
+      {"type": "orbiting_circle", "color": "secondary", "size": 35, "orbit_radius": 180, "speed": 1.8},
+      {"type": "constellation", "color": "highlight", "n_stars": 8, "radius": 120}
+    ]
+  },
+  "audio": {
+    "mode": "synth",
+    "bpm": 100,
+    "layers": ["sub_bass", "pad", "arps", "kick", "glitch_pops", "resolve_chord"]
+  }
+}

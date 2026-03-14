@@ -1,0 +1,66 @@
+{
+  "_comment": "Explainer/promo style — clean presentation acts with glitch chaos layers. Swap text_screens for your brand.",
+  "meta": {
+    "name": "Brand Explainer",
+    "seed": 20260314,
+    "duration": 30,
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "output": "output_explainer.mp4"
+  },
+  "sources": {
+    "video": null,
+    "images": [],
+    "generators": [
+      "dark_bg",
+      {"type": "wireframe_cube", "rot": 0.4, "line_color": "primary"},
+      {"type": "wireframe_cube", "rot": 1.2, "line_color": "accent"},
+      {"type": "wireframe_cube", "rot": 2.5, "line_color": "secondary"},
+      {"type": "gradient", "c1": "bg", "c2": [20, 30, 60], "angle": 180},
+      "jellyfish"
+    ],
+    "text_screens": [
+      {"lines": [["YOUR BRAND", "primary", 80], ["Tagline goes here", "highlight", 48]]},
+      {"lines": [["Feature One", "accent", 60], ["Description text.", "muted", 40]]},
+      {"lines": [["Feature Two", "secondary", 60], ["Description text.", "muted", 40]]},
+      {"lines": [["Open. Free. Private.", "highlight", 56], ["Your data stays local.", "primary", 44]]},
+      {"lines": [["BUILD.", "primary", 64], ["STRESS-TEST.", "accent", 64], ["REBUILD.", "secondary", 64]]},
+      {"lines": [["yourbrand.com", "primary", 72]]}
+    ],
+    "build_mutations": true,
+    "build_diffusions": true,
+    "build_extreme": true
+  },
+  "colors": {
+    "bg": [10, 10, 14],
+    "primary": [100, 255, 150],
+    "secondary": [255, 100, 80],
+    "accent": [255, 215, 0],
+    "highlight": [240, 240, 245],
+    "muted": [140, 140, 160],
+    "warm": [255, 180, 100]
+  },
+  "text": {
+    "vibes": ["YOUR BRAND", "Feature One", "Feature Two", "yourbrand.com"],
+    "font_size_base": 55
+  },
+  "timeline": [
+    {"style": "chaos",        "pct": 10, "intensity": [0.85, 1.0], "texts": ["YOUR BRAND"]},
+    {"style": "presentation", "pct": 14, "intensity": [0.05, 0.1], "texts": ["Tagline goes here"]},
+    {"style": "presentation", "pct": 20, "intensity": [0.05, 0.15], "texts": ["Feature One", "Feature Two"]},
+    {"style": "calm",         "pct": 13, "intensity": [0.05, 0.1], "texts": ["Open. Free. Private."]},
+    {"style": "meditation",   "pct": 17, "intensity": [0.08, 0.15], "texts": ["BUILD. STRESS-TEST. REBUILD."]},
+    {"style": "descent",      "pct": 13, "intensity": [0.5, 0.9],  "texts": ["", "YOUR BRAND"]},
+    {"style": "resolve",      "pct": 13, "intensity": [0.03, 0.08], "texts": ["yourbrand.com"]}
+  ],
+  "motifs": {
+    "enabled": false,
+    "items": []
+  },
+  "audio": {
+    "mode": "synth",
+    "bpm": 90,
+    "layers": ["sub_bass", "hook_stabs", "pad", "arps", "kick", "resolve_chord"]
+  }
+}

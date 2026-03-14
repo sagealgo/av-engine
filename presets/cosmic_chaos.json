@@ -1,0 +1,59 @@
+{
+  "_comment": "Cosmic chaos — video input remixed with blue square, red circle, constellation, geometry motifs",
+  "meta": {
+    "name": "Cosmic Chaos Remix",
+    "seed": 2026031402,
+    "duration": 14,
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "output": "output_cosmic_chaos.mp4"
+  },
+  "sources": {
+    "video": "~/Desktop/wiwiwi.mp4",
+    "images": [],
+    "generators": ["constellation_field", "geometry_field", "iconic_shapes", "sun_moon"],
+    "text_screens": [],
+    "build_mutations": true,
+    "build_diffusions": true,
+    "build_extreme": true
+  },
+  "colors": {
+    "bg": [8, 8, 18],
+    "primary": [40, 100, 255],
+    "secondary": [255, 60, 60],
+    "accent": [255, 215, 0],
+    "highlight": [230, 230, 245],
+    "muted": [140, 140, 160],
+    "warm": [255, 180, 100]
+  },
+  "text": {
+    "vibes": ["🟦⭕️", "GOOD VIBES ONLY", "✨🌙☀️", "GEOMETRY IS LOVE", "COSMIC ALIGNMENT", "LOW POLY DREAMS", "CONSTELLATION ENERGY", "POSITIVITY ∞", "SACRED GEOMETRY"],
+    "font_size_base": 55
+  },
+  "timeline": [
+    {"style": "chaos",     "pct": 13, "intensity": [0.9, 1.0],  "texts": ["🟦⭕️", "", "GOOD VIBES ONLY"]},
+    {"style": "calm",      "pct": 20, "intensity": [0.05, 0.12], "texts": ["", "☀️🌙", "", "GEOMETRY IS LOVE"]},
+    {"style": "growth",    "pct": 20, "intensity": [0.15, 0.55], "texts": ["CONSTELLATION ENERGY", "", "LOW POLY DREAMS", "", "✦ ✧ ✦"]},
+    {"style": "descent",   "pct": 20, "intensity": [0.3, 0.9],  "texts": ["SACRED GEOMETRY", "", "", "🟦", "", "⭕️"]},
+    {"style": "abyss",     "pct": 14, "intensity": [0.85, 1.0], "texts": ["COSMIC ALIGNMENT", "", "", "POSITIVITY ∞"]},
+    {"style": "catharsis", "pct": 6,  "intensity": [0.05, 0.08], "texts": ["☀️🌙"]},
+    {"style": "resolve",   "pct": 7,  "intensity": [0.05, 0.1],  "texts": ["GOOD VIBES ONLY"]}
+  ],
+  "motifs": {
+    "enabled": true,
+    "items": [
+      {"type": "orbiting_square", "color": "primary", "size": 60, "orbit_radius": 300, "speed": 1.5},
+      {"type": "orbiting_circle", "color": "secondary", "size": 40, "orbit_radius": 250, "speed": 2.0},
+      {"type": "constellation", "color": "highlight", "n_stars": 6, "radius": 100},
+      {"type": "drifting_polygons", "count": 3, "sides": 3, "colors": ["primary", "secondary", "accent"]}
+    ]
+  },
+  "audio": {
+    "mode": "mix",
+    "original_volume": 0.65,
+    "synth_volume": 0.45,
+    "bpm": 110,
+    "layers": ["sub_bass", "hook_stabs", "pad", "arps", "chaos_stabs", "kick", "glitch_pops", "resolve_chord"]
+  }
+}

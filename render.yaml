@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: av-engine
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: AV_PASSWORD
+        sync: false
+      - key: AV_SECRET_KEY
+        generateValue: true
+      - key: PORT
+        value: 5111
+    healthCheckPath: /login
+    disk:
+      name: av-jobs
+      mountPath: /app/jobs
+      sizeGB: 1
