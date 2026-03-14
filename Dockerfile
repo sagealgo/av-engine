@@ -14,6 +14,6 @@ COPY presets/ presets/
 
 RUN mkdir -p jobs
 
-EXPOSE 5111
+EXPOSE 10000
 
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5111", "--timeout", "120", "--workers", "1", "--threads", "4"]
+CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:${PORT:-10000} --timeout 120 --workers 1 --threads 4"]
